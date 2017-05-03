@@ -5,7 +5,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @IBOutlet weak var window: NSWindow!
     @IBOutlet weak var view: NSView!
-    
+        
     func applicationDidFinishLaunching(aNotification: NSNotification) {
 
     }

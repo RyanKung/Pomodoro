@@ -249,7 +249,7 @@
 				DEVELOPMENT_TEAM = 962YLMK8P5;
 				INFOPLIST_FILE = Pomodoro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = rk.Pomodoro;
+				PRODUCT_BUNDLE_IDENTIFIER = pomodoro.rk.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -263,7 +263,7 @@
 				DEVELOPMENT_TEAM = 962YLMK8P5;
 				INFOPLIST_FILE = Pomodoro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = rk.Pomodoro;
+				PRODUCT_BUNDLE_IDENTIFIER = pomodoro.rk.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

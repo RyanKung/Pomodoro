@@ -18,9 +18,14 @@
         <menu id="4Hk-vF-8ux">
             <items>
                 <menuItem title="--:--" id="dOL-hm-wWd">
+                    <attributedString key="attributedTitle"/>
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="pauseClickedWithSender:" target="AGB-15-GGi" id="zIm-pW-Ij2"/>
+                    </connections>
                 </menuItem>
                 <menuItem title="Start" id="pgd-yz-p8c">
+                    <attributedString key="attributedTitle"/>
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="startClickedWithSender:" target="AGB-15-GGi" id="nmz-E7-KGq"/>
@@ -33,6 +38,9 @@
                     </connections>
                 </menuItem>
             </items>
+            <connections>
+                <outlet property="delegate" destination="AGB-15-GGi" id="KXO-8L-oyg"/>
+            </connections>
             <point key="canvasLocation" x="144" y="189.5"/>
         </menu>
     </objects>
