@@ -82,10 +82,10 @@ class ViewController: NSViewController {
     }
    
     override func awakeFromNib() {
-//        let icon = NSImage(named: "statusIcon")
-//        icon?.isTemplate = false // best for dark mode
-//        statusItem.image = icon
-        statusItem.title = "P"
+        let icon = NSImage(named: "statusIcon")
+        icon?.isTemplate = true // best for dark mode
+        statusItem.image = icon
+//        statusItem.title = "P"
         statusItem.menu = statusMenu
         self.timer = Timer.scheduledTimer(timeInterval: 1,
                                           target:self,selector:#selector(ViewController.calcu),
