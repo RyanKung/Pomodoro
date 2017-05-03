@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ViewController" customModule="Pomodoro" customModuleProvider="target"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject" customModule="Pomodoro" customModuleProvider="target"/>
+        <customObject id="AGB-15-GGi" customClass="ViewController" customModule="Pomodoro" customModuleProvider="target">
+            <connections>
+                <outlet property="ctrlBtn" destination="pgd-yz-p8c" id="t9N-ao-XdV"/>
+                <outlet property="showingCtx" destination="dOL-hm-wWd" id="xQm-fJ-0j3"/>
+                <outlet property="statusMenu" destination="4Hk-vF-8ux" id="QOm-9N-HBl"/>
+            </connections>
+        </customObject>
+        <menu id="4Hk-vF-8ux">
+            <items>
+                <menuItem title="Current" id="dOL-hm-wWd">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="Start" id="pgd-yz-p8c">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="startClickedWithSender:" target="AGB-15-GGi" id="nmz-E7-KGq"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Quit" id="XM5-No-ft7">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="quitClickedWithSender:" target="AGB-15-GGi" id="Mru-gH-JOb"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="144" y="189.5"/>
+        </menu>
+    </objects>
+</document>

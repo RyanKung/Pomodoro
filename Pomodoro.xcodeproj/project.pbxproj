@@ -8,18 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		94DC79FB1EB867480096710C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC79FA1EB867480096710C /* AppDelegate.swift */; };
-		94DC79FD1EB867480096710C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC79FC1EB867480096710C /* ViewController.swift */; };
 		94DC79FF1EB867480096710C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94DC79FE1EB867480096710C /* Assets.xcassets */; };
-		94DC7A021EB867480096710C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94DC7A001EB867480096710C /* Main.storyboard */; };
+		94EACF3D1EB8A7AA0022BEF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EACF3B1EB8A7AA0022BEF7 /* ViewController.swift */; };
+		94F38E3F1EB90257000A4C99 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94F38E3E1EB90257000A4C99 /* ViewController.xib */; };
+		94F38E411EB9028A000A4C99 /* RestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F38E401EB9028A000A4C99 /* RestViewController.swift */; };
+		94F38E431EB90296000A4C99 /* RestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94F38E421EB90296000A4C99 /* RestViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		94DC79F71EB867480096710C /* Pomodoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pomodoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94DC79FA1EB867480096710C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		94DC79FC1EB867480096710C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		94DC79FE1EB867480096710C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		94DC7A011EB867480096710C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		94DC7A031EB867480096710C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94EACF3B1EB8A7AA0022BEF7 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		94F38E3E1EB90257000A4C99 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		94F38E401EB9028A000A4C99 /* RestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestViewController.swift; sourceTree = "<group>"; };
+		94F38E421EB90296000A4C99 /* RestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RestViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,9 +57,11 @@
 			isa = PBXGroup;
 			children = (
 				94DC79FA1EB867480096710C /* AppDelegate.swift */,
-				94DC79FC1EB867480096710C /* ViewController.swift */,
+				94EACF3B1EB8A7AA0022BEF7 /* ViewController.swift */,
+				94F38E3E1EB90257000A4C99 /* ViewController.xib */,
+				94F38E401EB9028A000A4C99 /* RestViewController.swift */,
+				94F38E421EB90296000A4C99 /* RestViewController.xib */,
 				94DC79FE1EB867480096710C /* Assets.xcassets */,
-				94DC7A001EB867480096710C /* Main.storyboard */,
 				94DC7A031EB867480096710C /* Info.plist */,
 			);
 			path = Pomodoro;
@@ -121,8 +127,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94F38E431EB90296000A4C99 /* RestViewController.xib in Resources */,
 				94DC79FF1EB867480096710C /* Assets.xcassets in Resources */,
-				94DC7A021EB867480096710C /* Main.storyboard in Resources */,
+				94F38E3F1EB90257000A4C99 /* ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,23 +140,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94DC79FD1EB867480096710C /* ViewController.swift in Sources */,
+				94EACF3D1EB8A7AA0022BEF7 /* ViewController.swift in Sources */,
+				94F38E411EB9028A000A4C99 /* RestViewController.swift in Sources */,
 				94DC79FB1EB867480096710C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		94DC7A001EB867480096710C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				94DC7A011EB867480096710C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		94DC7A041EB867480096710C /* Debug */ = {
@@ -291,6 +288,7 @@
 				94DC7A081EB867480096710C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

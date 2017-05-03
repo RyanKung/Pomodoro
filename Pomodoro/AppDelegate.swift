@@ -1,26 +1,17 @@
-//
-//  AppDelegate.swift
-//  Pomodoro
-//
-//  Created by Ryan Kung on 2/5/2017.
-//  Copyright © 2017 Ryan. All rights reserved.
-//
-
 import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
+    
+    @IBOutlet weak var window: NSWindow!
+    @IBOutlet weak var view: NSView!
+    
+    func applicationDidFinishLaunching(aNotification: NSNotification) {
 
-
-
-    func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
     }
-
-    func applicationWillTerminate(_ aNotification: Notification) {
+    
+    
+    func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
     }
-
-
 }
-
