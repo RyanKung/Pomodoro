@@ -16,33 +16,40 @@ class ViewController: NSViewController {
     @IBOutlet weak var restWin: NSWindow!
     
     var restView = RestViewController(nibName: "RestViewController", bundle: Bundle.main)
-    var status = "0" // 0 for pause, 1 for working, -1 for resting, all Strings.
-
+    var status = "0" // 0 for Stop, 1 for working, -1 for resting, all Strings.
     var startTime = Date()
     let statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
     var timer:Timer!
     var delta:Float = 0.0
  
+    func stop() {
+        self.ctrlBtn.title = "Start"
+        self.showingCtx.title = "--:--"
+        if (self.restView?.isViewLoaded)! {
+            self.restView?.window.close()
+        }
+        self.status = "0"
+    }
+
     
     func rest() {
         self.restView?.loadView()
-        self.showingCtx.title = "Resting"
         self.status = "-1"
     }
     
     func work() {
-        self.restView?.window.close()
+        self.startTime = Date()
+        self.ctrlBtn.title = "Stop"
+        if (self.restView?.isViewLoaded)! {
+            self.restView?.window.close()
+        }
         self.status = "1"
-        self.delta = 0.0
     }
     
     func calcu() {
-        print("calcu")
-        print("status")
         var total: Double
 
         if self.status == "0" {
-            self.startTime = Date()
             return
         }
         if self.status == "-1" {
@@ -50,11 +57,7 @@ class ViewController: NSViewController {
         } else {
             total = 25
         }
-        if self.status != "0" {
-            self.delta = self.delta + Float(total - (Date().timeIntervalSince1970 - self.startTime.timeIntervalSince1970) / 60)
-        }
-        
-        print("\(delta)")
+        self.delta = Float(total - (Date().timeIntervalSince1970 - self.startTime.timeIntervalSince1970) / 60)
         
         if self.delta <= 0{
             if self.status == "1" {
@@ -65,14 +68,17 @@ class ViewController: NSViewController {
 
         }
         let minutes = Int(self.delta)
-        let seconds = Int((self.delta - Float(minutes)) * 60)
+        var seconds = String(Int((self.delta - Float(minutes)) * 60))
+        if seconds.characters.count < 2 {
+            seconds = "0" + seconds
+        }
         
         if status == "-1" {
             self.restView?.text.title = "\(minutes):\(seconds)"
+            self.showingCtx.title = "\(minutes):\(seconds)"
         } else {
-            showingCtx.title = "\(minutes):\(seconds)"
+            self.showingCtx.title = "\(minutes):\(seconds)"
         }
-        self.delta = 0.0
     }
    
     override func awakeFromNib() {
@@ -91,16 +97,12 @@ class ViewController: NSViewController {
     }
     
     @IBAction func startClicked(sender: NSMenuItem) {
-        if self.ctrlBtn.title == "Start" {
-            self.status = "1"
-            self.startTime = Date()
-            self.ctrlBtn.title = "Pause"
+        if self.status == "0" {
+            self.work()
         } else {
-            self.ctrlBtn.title = "Start"
-            self.status = "0"
+            self.stop() 
         }
     }
-    
     @IBAction func quitClicked(sender: NSMenuItem) {
         NSApplication.shared().terminate(self)
     }
